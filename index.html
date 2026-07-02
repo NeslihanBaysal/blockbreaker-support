@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Block Breaker — Destek</title>
+<style>
+  :root{
+    --bg:#14161b;
+    --panel:#1c1f26;
+    --panel-border:#2a2e37;
+    --coral:#ff5a5f;
+    --amber:#ffb238;
+    --teal:#37d6b0;
+    --text:#f3f1ea;
+    --muted:#8b93a6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.025) 0px,
+        rgba(255,255,255,0.025) 1px,
+        transparent 1px,
+        transparent 34px
+      );
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--teal);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:72px 24px 56px;
+  }
+  .bricks{
+    display:flex;
+    gap:6px;
+    margin-bottom:28px;
+  }
+  .brick{
+    width:28px;
+    height:12px;
+    border-radius:3px;
+  }
+  .brick:nth-child(1){background:var(--coral);}
+  .brick:nth-child(2){background:var(--amber);}
+  .brick:nth-child(3){background:var(--teal);}
+  .brick:nth-child(4){background:var(--coral); opacity:.55;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:12px;
+    font-weight:700;
+    color:var(--muted);
+    margin:0 0 10px;
+  }
+  h1{
+    font-size:38px;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    text-wrap:balance;
+    margin:0 0 14px;
+  }
+  .lede{
+    color:var(--muted);
+    font-size:16px;
+    max-width:52ch;
+    margin:0 0 48px;
+  }
+  section{
+    margin-bottom:36px;
+  }
+  h2{
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius:14px;
+    padding:24px 26px;
+  }
+  .contact-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .contact-row p{
+    margin:0;
+    color:var(--muted);
+    font-size:14px;
+  }
+  .mail-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--coral);
+    color:#1a0a08;
+    font-weight:700;
+    font-size:15px;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:10px;
+    transition:filter .15s ease;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    white-space:nowrap;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .mail-btn:hover{filter:brightness(1.08);}
+  }
+  .faq{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .faq-item dt{
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:6px;
+  }
+  .faq-item dd{
+    margin:0;
+    color:var(--muted);
+    font-size:14.5px;
+    max-width:58ch;
+  }
+  footer{
+    margin-top:56px;
+    padding-top:24px;
+    border-top:1px solid var(--panel-border);
+    color:var(--muted);
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  @media (max-width:480px){
+    h1{font-size:30px;}
+    .wrap{padding:48px 18px 40px;}
+    .contact-row{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bricks">
+    <div class="brick"></div>
+    <div class="brick"></div>
+    <div class="brick"></div>
+    <div class="brick"></div>
+  </div>
+
+  <p class="eyebrow">Block Breaker</p>
+  <h1>Destek Merkezi</h1>
+  <p class="lede">Sorularınız, geri bildirimleriniz veya karşılaştığınız bir sorun için buradayız. Aşağıdan bize ulaşabilir ya da sık sorulan soruların yanıtlarına göz atabilirsiniz.</p>
+
+  <section>
+    <h2>İletişim</h2>
+    <div class="card contact-row">
+      <p>Genellikle 2 iş günü içinde dönüş yapıyoruz.</p>
+      <a class="mail-btn" href="mailto:neslihanbaysal2@gmail.com">neslihanbaysal2@gmail.com</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sık Sorulan Sorular</h2>
+    <dl class="faq">
+      <div class="faq-item">
+        <dt>Oyunda neden reklam görüyorum?</dt>
+        <dd>Block Breaker tamamen ücretsizdir. Hakkınız bittiğinde kısa bir reklam izleyerek kaldığınız yerden devam edebilirsiniz; bu, oyunun ücretsiz kalmasını sağlıyor.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Hesap oluşturmam gerekiyor mu?</dt>
+        <dd>Hayır. Block Breaker'da giriş veya hesap sistemi yoktur, kişisel veri toplamadan doğrudan oynayabilirsiniz.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Bir hata (bug) buldum, nasıl bildirebilirim?</dt>
+        <dd>Yukarıdaki e-posta adresine cihaz modelinizi ve karşılaştığınız sorunu kısaca yazarak iletebilirsiniz.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Skorum veya ilerlemem kayboldu, geri getirebilir miyim?</dt>
+        <dd>İlerleme cihazınızda yerel olarak tutulur. Uygulamayı silmeden önce cihaz değiştiriyorsanız bize e-posta ile ulaşın, yardımcı olmaya çalışalım.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <span>Block Breaker</span>
+    <span>© 2026</span>
+  </footer>
+</div>
+</body>
+</html>
